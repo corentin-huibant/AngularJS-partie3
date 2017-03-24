@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr" ng-app="testApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercice 7</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+<body>
+<div ng-controller="phonesCtrl">
+  <table cellspacing="2px" cellpadding="2px;" rules="all" style="border:solid 1px black;">
+    <thead>
+      <th>Modèle</th>
+      <th>Marque</th>
+    </thead>
+    <!-- Le filtre orderBy permet d'ordonner à travers l'onglet choisi-->
+    <tr ng-repeat="phone in phones | orderBy: 'phoneModel'">
+      <td>
+        {{phone.phoneModel}}
+      </td>
+      <td>
+        {{phone.brand}}
+      </td>
+    </tr>
+  </table>
+</div>
+    <a href="../Exercice_1/index.html"><button type="button" name="exercice1">Exercice 1</button></a>
+    <a href="../Exercice_2/index.html"><button type="button" name="exercice2">Exercice 2</button></a>
+    <a href="../Exercice_3/index.html"><button type="button" name="exercice3">Exercice 3</button></a>
+    <a href="../Exercice_4/index.html"><button type="button" name="exercice4">Exercice 4</button></a>
+    <a href="../Exercice_5/index.html"><button type="button" name="exercice5">Exercice 5</button></a>
+    <a href="../Exercice_6/index.html"><button type="button" name="exercice6">Exercice 6</button></a>
+    <a href="../Exercice_7/index.html"><button type="button" name="exercice7">Exercice 7</button></a>
+</body>
+</html>
